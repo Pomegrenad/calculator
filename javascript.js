@@ -1,4 +1,22 @@
-const numBtn = document.querySelector('numBtn');
+let container = document.querySelector('#container');
+
+//number buttons
+
+let Number = [0,1,2,3,4,5,6,7,8,9];
+for(i=0; i<10; i++){
+  let button = document.createElement("button"); 
+  button.textContent = Number[i];
+  button.className = "number btn";
+  container.appendChild(button);
+}
+
+let Symbol =['+','-','*','/','^','='];
+for(i=0; i<6; i++){
+  let button = document.createElement("button")
+  button.textContent = Symbol[i];
+  button.className = "symbol btn";
+  container.appendChild(button);
+}
 
 //math functions
 const add = function(a,b) {
@@ -87,4 +105,4 @@ const operate =(a,b,c)=>{
     return total;
   };
 
-  console.log(calculator(1,3,'*'));
+  console.log(operate(1,3,'*'));

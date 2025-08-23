@@ -1,0 +1,14 @@
+#container{
+    display: block;
+    height: 600px;
+    width: 400px;
+    background-color: whitesmoke;
+}
+
+.button{
+    display: flex;
+    background: black;
+    height: 60px;
+    width: 60px;
+
+}
