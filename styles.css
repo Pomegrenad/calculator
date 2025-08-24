@@ -1,14 +1,35 @@
 #container{
-    display: block;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
     height: 600px;
     width: 400px;
     background-color: whitesmoke;
+    border: 10px;
+    border-radius: 20px;
 }
 
-.button{
+#screen{
+    text-align: right;
     display: flex;
-    background: black;
-    height: 60px;
-    width: 60px;
+    height: 200px;
+    width: 350px;
+    background-color: beige;
 
 }
+
+.num{ 
+    display: flex;
+    flex-wrap: wrap;
+    border: 10px;
+    height: 90px;
+    width: 90px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    color: #04AA6D;
+
+}
+.button:hover {
+    background-color: #04AA6D; /* Green */
+    color: white;
+  }

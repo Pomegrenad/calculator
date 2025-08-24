@@ -1,22 +1,29 @@
 let container = document.querySelector('#container');
+let screen = document.querySelector("#screen");
+let clrBtn = document.createElement("button");
+
+clrBtn.textContent = "clr";
+container.appendChild(clrBtn);
+
+
 
 //number buttons
 
-let Number = [0,1,2,3,4,5,6,7,8,9];
-for(i=0; i<10; i++){
-  let button = document.createElement("button"); 
-  button.textContent = Number[i];
-  button.className = "number btn";
-  container.appendChild(button);
-}
+// let Number = [0,1,2,3,4,5,6,7,8,9];
+// for(i=0; i<10; i++){
+//   let numBtn = document.createElement("button"); 
+//   numBtn.textContent = Number[i];
+//   numBtn.className = "Number[i] btn";
+//   container.appendChild(numBtn);
+// }
 
-let Symbol =['+','-','*','/','^','='];
-for(i=0; i<6; i++){
-  let button = document.createElement("button")
-  button.textContent = Symbol[i];
-  button.className = "symbol btn";
-  container.appendChild(button);
-}
+// let Symbol =['+','-','*','/','^','='];
+// for(i=0; i<6; i++){
+//   let symBtn = document.createElement("button")
+//   symBtn.textContent = Symbol[i];
+//   symBtn.className = "Symbol[i] btn";
+//   container.appendChild(symBtn);
+// }
 
 //math functions
 const add = function(a,b) {
