@@ -55,16 +55,6 @@ const add = function(a,b) {
     return sum;
   }
 
-  //const multiply = function(array) {
-    //return array.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
-
-  //};
-
-  //const divide = function(array) {
-    //return array.reduce((accumulator, currentValue) => accumulator / currentValue, 1);
-
-  //};
-
   const power = function(a,b) {
     return Math.pow(a,b);
 
@@ -114,3 +104,19 @@ const operate =(a,b,c)=>{
 
   //display
 
+let currentOutput = "";
+
+const populateDisplay =(value)=>{
+  if(currentOutput==="" || resultOutput){
+    //to make sure current display will be replaced
+    currentOutput = value;
+  } else {
+    currentOutput +=value;
+  }
+  updateDisplay();
+}
+
+const updateDisplay=()=>{
+  const displayElement = document.getElementById("display");
+  displayElement.tectContent = currentOutput;
+}
