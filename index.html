@@ -10,24 +10,24 @@
     <div id="screen"></div>
     <div id="container">
         
-        <button id="btn" class="clr">clr</button>
-        <button id="btn" class="sympow">^</button>
-        <button id="btn" class="symdiv">/</button>
-        <button id="btn" class="num7">7</button>
-        <button id="btn" class="num8">8</button>
-        <button id="btn" class="num9">9</button>
-        <button id="btn" class="symmul">*</button>
-        <button id="btn" class="num4">4</button>
-        <button id="btn" class="num5">5</button>
-        <button id="btn" class="num6">6</button>
-        <button id="btn" class="symsin">-</button>
-        <button id="btn" class="num1">1</button>
-        <button id="btn" class="num2">2</button>
-        <button id="btn" class="num3">3</button>
-        <button id="btn" class="symcon">+</button>
-        <button id="btn" class="num0">0</button>
-        <button id="btn" class="sympo">.</button>
-        <button id="btn" class="symeq">=</button>
+        <button onclick="clearDisplay()" class="clr">clr</button>
+        <button class="sympow">^</button>
+        <button class="symdiv">/</button>
+        <button onclick="populateDisplay('7')" class="num7">7</button>
+        <button onclick="populateDisplay('8')" class="num8">8</button>
+        <button onclick="populateDisplay('9')" class="num9">9</button>
+        <button class="symmul">*</button>
+        <button onclick="populateDisplay('4')" class="num4">4</button>
+        <button onclick="populateDisplay('5')" class="num5">5</button>
+        <button onclick="populateDisplay('6')" class="num6">6</button>
+        <button class="symsin">-</button>
+        <button onclick="populateDisplay('1')" class="num1">1</button>
+        <button onclick="populateDisplay('2')" class="num2">2</button>
+        <button onclick="populateDisplay('3')" class="num3">3</button>
+        <button class="symcon">+</button>
+        <button class="num0">0</button>
+        <button class="sympo">.</button>
+        <button class="symeq">=</button>
         
     </div>
     <script src="javascript.js" defer></script>
