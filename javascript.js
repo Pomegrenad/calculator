@@ -104,7 +104,6 @@ const add = function(a,b) {
 }
 
 
-
 function clearDisplay(){
   currentOutput ="";
   firstOperand=null;
@@ -113,4 +112,34 @@ function clearDisplay(){
   resultOutput= false;
   updateDisplay();
 
+}
+
+function setOperator(op) {
+  if (operator !== null && !resultOutput) {
+    calculate();
+  }
+  firstOperand = parseFloat(currentOutput);
+  operator = op;
+  resultOutput = true;
+}
+
+function calculate(){
+  if (operator === null || resultOutput) return;
+
+  secondOperand = parseFloat(currentOutput);
+
+  if (operator === "/" && secondOperand === 0) {
+    screen.textContent = "Do you think you can divide by 0?";
+    currentOutput = "";
+    operator = null;
+    return;
+  };
+
+  let result = operate(firstOperand, secondOperand, operator);
+  currentOutput = result.toString();
+  updateDisplay();
+
+  
+  operator = null;
+  resultOutput = true;
 }
